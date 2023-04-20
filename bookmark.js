@@ -17,9 +17,10 @@ javascript:(async function() {
         }
       });
     });
-    a.href = URL.createObjectURL(new Blob([`<!DOCTYPE html>
-<html><body>${template.innerHTML}</body></html>`], {type: 'text/html'}));
-    a.download = `chat-gpt-${slug}.html`;
+    a.href = URL.createObjectURL(new Blob([`====== [ChatGPT] ${title} ======
+
+<html><body>${template.innerHTML}</body></html>`], {type: 'text/plain'}));
+    a.download = `chatgpt-${slug}.txt`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
