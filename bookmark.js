@@ -17,8 +17,7 @@ javascript:(async function() {
         }
       });
     });
-    a.href = URL.createObjectURL(new Blob([`====== [ChatGPT] ${title} ======
-
+    a.href = URL.createObjectURL(new Blob([`====== [ChatGPT] ${title} ======\n\n
 <html><body>${template.innerHTML}</body></html>`], {type: 'text/plain'}));
     a.download = `chatgpt-${slug}.txt`;
     document.body.appendChild(a);
